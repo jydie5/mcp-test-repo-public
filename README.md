@@ -1,4 +1,31 @@
-# MCP Server Configuration Test
+# MCP Server Configuration for CLINE
+
+## 概要
+このリポジトリは、CLINE（AI アシスタントツール）でModel Context Protocol (MCP) サーバーを利用するための設定とガイドラインを提供します。
+
+## 前提条件
+
+### 必要な環境
+1. CLINE環境
+   - VSCode拡張機能「Roo Code」（推奨）
+   - または本家CLINEアプリケーション
+
+2. 必要なツール
+   - Node.js
+   - npm
+
+### 設定場所
+MCPの設定ファイル（cline_mcp_settings.json）は以下の場所に配置します：
+
+- Roo Code（VSCode拡張機能）の場合：
+  ```
+  /Users/(ユーザー名)/Library/Application Support/Code/User/globalStorage/rooveterinaryinc.roo-cline/settings/cline_mcp_settings.json
+  ```
+
+- 本家CLINEの場合：
+  ```
+  ~/Library/Application Support/Claude/claude_desktop_config.json
+  ```
 
 ## プロジェクトの進化
 
@@ -36,15 +63,31 @@
    - .mcprulesへのリンク
    - 設定ファイルの場所
 
-### 3. 設定ファイルの管理
+## 利用可能なMCPサーバー
 
-設定ファイルの場所：
-```
-/Users/(ユーザー名)/Library/Application Support/Code/User/globalStorage/rooveterinaryinc.roo-cline/settings/cline_mcp_settings.json
-```
+1. Filesystem Server
+   - ファイルシステムへのアクセス
+   - ファイル操作の自動化
 
-- 環境変数と機密情報は各ユーザーがcline_mcp_settings.jsonで直接管理
-- セキュリティを考慮した設計
+2. Brave Search
+   - Web検索機能の統合
+   - 最新情報の取得
+
+3. Puppeteer
+   - Webブラウザの自動操作
+   - スクリーンショットの取得
+
+4. GitHub
+   - リポジトリの操作
+   - コード管理の自動化
+
+## セットアップ方法
+
+1. MCPサーバーのインストール
+2. 設定ファイルの配置
+3. CLINE/Roo Codeでの有効化
+
+詳細な手順は `.mcprules` ファイルを参照してください。
 
 ## 学んだこと
 
@@ -70,3 +113,4 @@
 
 - 設定ファイルにはトークンなどの機密情報が含まれるため、適切なアクセス制御が必要
 - 定期的な設定の見直しと更新を推奨
+- MCPサーバーの設定は、使用するCLINE環境に応じて適切な場所に配置してください

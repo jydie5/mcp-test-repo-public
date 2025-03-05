@@ -1,0 +1,66 @@
+# MCP Server Rules and Guidelines
+
+## 前提条件
+- Node.jsがインストールされていること
+- npmがインストールされていること
+
+## 必要なMCPサーバー
+1. Filesystem Server
+   ```bash
+   npm install -g @modelcontextprotocol/server-filesystem
+   ```
+
+2. Brave Search Server
+   ```bash
+   npm install -g @modelcontextprotocol/server-brave-search
+   ```
+
+3. Puppeteer Server
+   ```bash
+   npm install -g @modelcontextprotocol/server-puppeteer
+   ```
+
+4. GitHub Server
+   ```bash
+   npm install -g @modelcontextprotocol/server-github
+   ```
+
+## セキュリティガイドライン
+1. API Keys、トークンなどの機密情報は必ずcline_mcp_settings.json内で管理
+2. 設定ファイルはバージョン管理に含めない
+3. パブリックリポジトリでの使用時は特に注意
+
+## 動作確認方法
+1. Node.jsとnpmのバージョン確認
+   ```bash
+   node -v
+   npm -v
+   ```
+
+2. 各サーバーの動作確認
+   ```bash
+   # Filesystemサーバー
+   npx @modelcontextprotocol/server-filesystem --help
+
+   # Brave Searchサーバー
+   npx @modelcontextprotocol/server-brave-search --help
+
+   # Puppeteerサーバー
+   npx @modelcontextprotocol/server-puppeteer --help
+
+   # GitHubサーバー
+   npx @modelcontextprotocol/server-github --help
+   ```
+
+## トラブルシューティング
+1. サーバー起動エラー
+   - Node.jsとnpmが最新版かチェック
+   - グローバルインストールの権限を確認
+
+2. 認証エラー
+   - 設定ファイルの環境変数が正しく設定されているか確認
+   - トークンの有効期限をチェック
+
+3. パス関連のエラー
+   - ユーザー名が正しく設定されているか確認
+   - 必要なディレクトリが存在するか確認

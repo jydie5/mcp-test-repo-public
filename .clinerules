@@ -1,0 +1,22 @@
+### MCPサーバを利用するテストのプロジェクトです
+
+# MCPサーバーの詳細な設定とガイドライン
+詳細は .mcprules ファイルを参照してください。
+
+#前提条件
+- Node.jsがインストールされていること
+- npmがインストールされていること
+
+# 基本的な確認コマンド
+```bash
+node -v
+npm -v
+```
+
+# 設定ファイルの場所
+MCPサーバーの設定は以下のファイルで管理されています：
+1. .mcprules - MCPサーバーの詳細な設定とガイドライン
+2. cline_mcp_settings.json - サーバー設定ファイル（環境変数を含む）
+   場所: /Users/(ユーザー名)/Library/Application Support/Code/User/globalStorage/rooveterinaryinc.roo-cline/settings/
+
+注意：設定ファイルには機密情報が含まれるため、適切なアクセス制御を行ってください。
